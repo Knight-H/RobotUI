@@ -4,11 +4,19 @@
   "description": "The UI of the robot",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Knight-H/RobotUI.git"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "typescript": "^2.6.2",
+    "@angular/cli": "^1.7.3"
   },
   "author": "Bhum and Gail",
   "license": "ISC",
