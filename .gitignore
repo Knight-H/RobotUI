@@ -1,3 +1,7 @@
+# compiled output
+/public
+
+
 # Logs
 logs
 *.log
