@@ -1,0 +1,18 @@
+.div1 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background:rgb(255, 255, 255);
+    margin: auto;
+    
+    transform: translate(5%,-80%);
+}
+.bg-img {
+    background-image: url('assets/background.jpg');
+    height: 480px;
+    width: 800px;
+    background-position:center; 
+	background-repeat:no-repeat; 
+	background-size:cover;
+	
+}
