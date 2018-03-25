@@ -19,9 +19,14 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "../node_modules/@mobiscroll/angular-lite/dist/css/mobiscroll.min.css",
+        "styles.css",
+        "./assets/mobileSelect.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "./assets/mobileSelect.js",
+        "./assets/mobileSelect.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

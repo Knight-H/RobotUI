@@ -1,11 +1,13 @@
+import { FormsModule } from '@angular/forms';
+import { MbscModule } from '@mobiscroll/angular-lite';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
 
 
 import { AppComponent } from './app.component';
-/*import { TestbhumComponent } from './components/testbhum/testbhum.component';
-import { TestgailComponent } from './components/testgail/testgail.component'; */
+///import { TestbhumComponent } from './components/testbhum/testbhum.component';
+import { TestgailComponent } from './components/testgail/testgail.component'; 
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { RequesttableComponent } from './components/requesttable/requesttable.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -24,7 +26,7 @@ const appRoutes: Routes = [
   {path: 'result', component: QueueresultComponent},
   {path: 'call', component: QueuecallComponent},
   {path: 'guide', component: GuidetotableComponent},
-  /*{path: 'gail', component: TestgailComponent} */
+  {path: 'gail', component: TestgailComponent} 
 ]
 
 
@@ -38,9 +40,12 @@ const appRoutes: Routes = [
     ReservequeueComponent,
     QueueresultComponent,
     QueuecallComponent,
-    GuidetotableComponent
+    GuidetotableComponent,
+    TestgailComponent
   ],
-  imports: [
+  imports: [ 
+    FormsModule, 
+    MbscModule,
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
