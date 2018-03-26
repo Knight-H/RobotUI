@@ -24,8 +24,7 @@
         "./assets/mobileSelect.css"
       ],
       "scripts": [
-        "./assets/mobileSelect.js",
-        "./assets/mobileSelect.min.js"
+        "./assets/mobileSelect.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

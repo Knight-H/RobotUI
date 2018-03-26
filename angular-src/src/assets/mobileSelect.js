@@ -3,13 +3,17 @@
  * (c) 2017-present onlyhom
  * Released under the MIT License.
  */
-
+var counter = 0;
+function alerter() {
+  alert("Hi " + counter);
+  counter = counter +  1;
+}
 (function() {
 	function getClass(dom,string) {
 		return dom.getElementsByClassName(string);
 	}
 	//构造器
-	function MobileSelect(config) {
+    function MobileSelect(config) {
 		this.mobileSelect;
 		this.wheelsData = config.wheels;
 		this.jsonType =  false;
@@ -29,14 +33,16 @@
 		this.clickStatus = false;
 		this.isPC = true;
 		this.init(config);
-	}
+    }
 	MobileSelect.prototype = {
 		constructor: MobileSelect,
-		init: function(config){
+        init: function (config) {
+
+          alerter();
 			var _this = this;
 			_this.keyMap = config.keyMap ? config.keyMap : {id:'id', value:'value', childs:'childs'};
 			_this.checkDataType();
-			_this.renderWheels(_this.wheelsData, config.cancelBtnText, config.ensureBtnText);
+			_this.renderWheels(_this.wheelsData, config.fcancelBtnText, config.ensureBtnText);
 			_this.trigger = document.querySelector(config.trigger);
 			if(!_this.trigger){
 				console.error('mobileSelect has been successfully installed, but no trigger found on your page.');
@@ -78,6 +84,8 @@
 
 			_this.setCurDistance(_this.initPosition);
 
+            _this.show();
+            alerter();
 
 			//按钮监听
 			_this.cancelBtn.addEventListener('click',function(){
@@ -105,7 +113,8 @@
 		    	_this.show();
 		    });
 		    _this.grayLayer.addEventListener('click',function(){
-				_this.hide();
+              _this.hide();
+              alerter();
 		    });
 		    _this.popUp.addEventListener('click',function(){
 		    	event.stopPropagation();
@@ -184,7 +193,7 @@
 
 		renderWheels: function(wheelsData, cancelBtnText, ensureBtnText){
 			var _this = this;
-			var cancelText = cancelBtnText ? cancelBtnText : 'Cancel';
+			var cancelText = cancelBtnText ? cancelBtnText : 'suckdick';
 			var ensureText = ensureBtnText ? ensureBtnText : 'Submit';
 			_this.mobileSelect = document.createElement("div");
 			_this.mobileSelect.className = "mobileSelect";

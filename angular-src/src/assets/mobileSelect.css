@@ -85,17 +85,17 @@
   clear: both;
   visibility: hidden;
 }
-.mobileSelect .content .panel .wheels {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-}
+  .mobileSelect .content .panel .wheels {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+  }
 .mobileSelect .content .panel .wheel {
   position: relative;
   z-index: 0;
   float: left;
   width: 50%;
-  height: 200px;
+  height: 50%;
   overflow: hidden;
   -webkit-transition: width 0.3s ease;
   transition: width 0.3s ease;
@@ -129,22 +129,23 @@
   border-top: 1px solid #DCDCDC;
   border-bottom: 1px solid #DCDCDC;
 }
-.mobileSelect .content .panel .shadowMask {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 200px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(rgba(255, 255, 255, 0)), to(#ffffff));
-  background: -webkit-linear-gradient(top, #ffffff, rgba(255, 255, 255, 0), #ffffff);
-  background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0), #ffffff);
-  opacity: 0.9;
-  pointer-events: none;
-}
+  .mobileSelect .content .panel .shadowMask {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(rgba(255, 255, 255, 0)), to(#ffffff));
+    background: -webkit-linear-gradient(top, #ffffff, rgba(255, 255, 255, 0), #ffffff);
+    background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0), #ffffff);
+    opacity: 0.9;
+    pointer-events: none;
+  }
 .mobileSelect-show {
   opacity: 1;
   z-index: 10000;
   visibility: visible;
 }
-.mobileSelect-show .content {
-  bottom: 0;
-}
+  .mobileSelect-show .content {
+    bottom: 0;
+    height: 100%;
+  }
