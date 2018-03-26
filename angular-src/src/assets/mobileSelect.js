@@ -5,7 +5,7 @@
  */
 var counter = 0;
 function alerter() {
-  alert("Hi " + counter);
+  //alert("Hi " + counter);
   counter = counter +  1;
 }
 (function() {
