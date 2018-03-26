@@ -18,8 +18,8 @@ export class ReservequeueComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    var weekdayArr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    var timeOutTimeMS = 5 * 1000;
+   var weekdayArr = ['1', '2', '3', '4', '5', '6', '>6'];
+    var timeOutTimeMS = 5 * 100000;// change from 1000--> 100000 to enlarge time because its too fast  by Gail
     var countDownMS = timeOutTimeMS;
 
     var mobileSelect1 = new MobileSelect({
@@ -36,7 +36,8 @@ export class ReservequeueComponent implements OnInit {
         $(document).ready(function () {
           $(document).click(function () {
             countDownMS = timeOutTimeMS;
-            alert("Time replaced: " + timeOutTimeMS);
+            // comment out by gail for easy implement UI
+           // alert("Time replaced: " + timeOutTimeMS);
           });
 
           // Timer count down
@@ -68,7 +69,7 @@ export class ReservequeueComponent implements OnInit {
       // Timer count down
       setInterval(() => {
         countDownMS = countDownMS - 500;
-        if (countDownMS < 0) s
+        if (countDownMS < 0) {
           window.location.href = "";
         }
       }, 500);

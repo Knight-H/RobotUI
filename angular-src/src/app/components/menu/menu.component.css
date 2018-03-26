@@ -7,3 +7,12 @@
 	background-size:cover;
 	
 }
+.back {
+  width: 400px;
+  height: 50px;
+  transform: translate(50%, 240%)
+}
+.salmon{
+
+transform: translate(15%,10%)
+}

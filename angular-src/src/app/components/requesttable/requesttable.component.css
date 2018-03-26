@@ -7,3 +7,24 @@
 	background-size:cover;
 	
 }
+.waiting {
+  width: 290px;
+  height: 290px;
+  transform: translate(20%, 25%)
+}
+.request {
+  width:290px;
+  height:290px;
+  transform: translate(-20%, 25%)
+}
+
+.back{
+  height: 60px;
+  width: 60px;
+  transform: translate(200px,380px)
+}
+.num {
+  display: table-cell;
+  vertical-align: baseline;
+  transform: translate(-150px,200px)
+}

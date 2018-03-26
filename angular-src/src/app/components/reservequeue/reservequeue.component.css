@@ -15,5 +15,32 @@
 	background-size:cover;
 	
 }
+.back {
+  height: 60px;
+  width: 60px;
+  transform: translate(-50px,400px)
+}
+.reserve {
+  width:400px;
+  height: 50px;
+  transform: translate(50%, 800%)
+}
+.amount {
+  font-size: 40px;
+  transform: translate(10%,80%);
+  font-weight: bold;
+}
+.people {
+  font-size: 40px;
+  transform: translate(-10%,-80%);
+  font-weight: bold
+}
+.boxnum {
+  display: table-cell;
+  vertical-align: middle;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  font-weight:bold;
+}
 
 

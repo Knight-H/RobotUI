@@ -98,7 +98,7 @@ var countDownMS = timeOutTimeMS;
         if (countDownMS < 0) {
           window.location.href = "";
         }
-      }, 500);
+      }, 50000);// adjust time from 500 --> 50000 so that the system not trigger too fast for implementaion purpose by Gail
       
 
 
@@ -158,7 +158,8 @@ var countDownMS = timeOutTimeMS;
       _this.popUp.addEventListener('click', function () {
         event.stopPropagation();
         countDownMS = timeOutTimeMS;
-        alert("Time replaced: " + timeOutTimeMS);
+        // comment out by Gail for easy implement UI
+        //alert("Time replaced: " + timeOutTimeMS);
         if (typeof this.onPopUpEvent === 'function') {
           this.onPopUpEvent(this);
         }
@@ -237,7 +238,7 @@ var countDownMS = timeOutTimeMS;
 
     renderWheels: function (wheelsData, cancelBtnText, ensureBtnText) {
       var _this = this;
-      var cancelText = cancelBtnText ? cancelBtnText : 'suckdick';
+      var cancelText = cancelBtnText ? cancelBtnText : 'Cancel';
       var ensureText = ensureBtnText ? ensureBtnText : 'Submit';
       _this.mobileSelect = document.createElement("div");
       _this.mobileSelect.className = "mobileSelect";
@@ -246,9 +247,9 @@ var countDownMS = timeOutTimeMS;
         '<div class="content">' +
         '<div class="btnBar">' +
         '<div class="fixWidth">' +
-        '<div class="cancel">' + cancelText + '</div>' +
-        '<div class="title"></div>' +
         '<div class="ensure">' + ensureText + '</div>' +
+        '<div class="title"></div>' +
+        '<div class="cancel">' + cancelText + '</div>' +
         '</div>' +
         '</div>' +
         '<div class="panel">' +

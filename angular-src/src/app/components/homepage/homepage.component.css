@@ -7,3 +7,13 @@
 	background-size:cover;
 	
 }
+.right {
+  width: 100px;
+  height: 400px;
+  transform: translate(-10%, 10%)
+}
+.left {
+  width: 100px;
+  height: 400px;
+  transform: translate(10%, 10%)
+}
