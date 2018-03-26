@@ -11,13 +11,14 @@ declare var MobileSelect: any;
   templateUrl: './reservequeue.component.html',
   styleUrls: ['./reservequeue.component.css']
 })
+
+
 export class ReservequeueComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
     var weekdayArr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-
     var timeOutTimeMS = 5 * 1000;
     var countDownMS = timeOutTimeMS;
 
@@ -31,24 +32,48 @@ export class ReservequeueComponent implements OnInit {
 
       ],
 
+      callback: function (indexArr, data) {
+        $(document).ready(function () {
+          $(document).click(function () {
+            countDownMS = timeOutTimeMS;
+            alert("Time replaced: " + timeOutTimeMS);
+          });
+
+          // Timer count down
+          setInterval(() => {
+            countDownMS = countDownMS - 500;
+            if (countDownMS < 0) {
+              window.location.href = "";
+            }
+          }, 500);
+        });
+      },
+
+      //onPopUpEvent: function () {
+      //  countDownMS = timeOutTimeMS;
+      //}
+
     });
+    
+
+    // We should use router instead
+    // Because we use Angular
+    /*
     $(document).ready(function () {
       $(document).click(function () {
         countDownMS = timeOutTimeMS;
         alert("Time replaced: " + timeOutTimeMS);
       });
+
+      // Timer count down
+      setInterval(() => {
+        countDownMS = countDownMS - 500;
+        if (countDownMS < 0) s
+          window.location.href = "";
+        }
+      }, 500);
     });
-
-    setInterval(() => {
-      countDownMS = countDownMS - 500;
-      if (countDownMS < 0) {
-        window.location.href = "";
-      }
-    }, 500);
-
-    // We should use router instead
-    // Because we use Angular
-    
+    */
   }
 
 }
