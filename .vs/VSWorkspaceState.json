@@ -1,6 +1,19 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\angular-src",
+    "\\angular-src\\src",
+    "\\angular-src\\src\\app",
+    "\\angular-src\\src\\app\\components",
+    "\\angular-src\\src\\app\\components\\guidetotable",
+    "\\angular-src\\src\\app\\components\\homepage",
+    "\\angular-src\\src\\app\\components\\menu",
+    "\\angular-src\\src\\app\\components\\queuecall",
+    "\\angular-src\\src\\app\\components\\queueresult",
+    "\\angular-src\\src\\app\\components\\requesttable",
+    "\\angular-src\\src\\app\\components\\reservequeue",
+    "\\angular-src\\src\\assets"
   ],
+  "SelectedNode": "\\angular-src\\src\\assets\\mobileSelect.js",
   "PreviewInSolutionExplorer": false
 }

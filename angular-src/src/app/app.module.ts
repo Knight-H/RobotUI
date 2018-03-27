@@ -6,7 +6,7 @@ import { RouterModule, Routes} from '@angular/router';
 
 
 import { AppComponent } from './app.component';
-///import { TestbhumComponent } from './components/testbhum/testbhum.component';
+import { TestbhumComponent } from './components/testbhum/testbhum.component';
 import { TestgailComponent } from './components/testgail/testgail.component'; 
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { RequesttableComponent } from './components/requesttable/requesttable.component';
@@ -41,7 +41,8 @@ const appRoutes: Routes = [
     QueueresultComponent,
     QueuecallComponent,
     GuidetotableComponent,
-    TestgailComponent
+    TestgailComponent,
+    TestbhumComponent
   ],
   imports: [ 
     FormsModule, 
