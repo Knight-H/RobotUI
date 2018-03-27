@@ -1,0 +1,532 @@
+.bg-img {
+  background-image: url('assets/background.jpg');
+  height: 880px;
+  width: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/*CSS pupils animation BEGIN*/
+.cssPupil {
+  -webkit-animation: lookingAround 20s infinite;
+  animation: lookingAround 20s infinite;
+}
+
+@-webkit-keyframes lookingAround {
+  0% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  10% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  12% {
+    margin: 6px 8px 3px 0px;
+  }
+
+  27% {
+    margin: 6px 8px 3px 0px;
+  }
+
+  30% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  40% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  43% {
+    margin: 1px 0px 8px 8px;
+  }
+
+  46% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  57% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  60% {
+    margin: 6px 8px 3px 0px;
+  }
+
+  63% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  77% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  80% {
+    margin: 6px 4px 3px 4px;
+  }
+
+  85% {
+    margin: 6px 4px 3px 4px;
+  }
+
+  88% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  92% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  100% {
+    margin: 6px 0px 3px 8px;
+  }
+}
+
+@keyframes lookingAround {
+  0% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  10% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  12% {
+    margin: 6px 8px 3px 0px;
+  }
+
+  27% {
+    margin: 6px 8px 3px 0px;
+  }
+
+  30% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  40% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  43% {
+    margin: 1px 0px 8px 8px;
+  }
+
+  46% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  57% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  60% {
+    margin: 6px 8px 3px 0px;
+  }
+
+  63% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  77% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  80% {
+    margin: 6px 4px 3px 4px;
+  }
+
+  85% {
+    margin: 6px 4px 3px 4px;
+  }
+
+  88% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  92% {
+    margin: 6px 0px 3px 8px;
+  }
+
+  100% {
+    margin: 6px 0px 3px 8px;
+  }
+}
+/*CSS pupils animation END*/
+/*CSS blinking BEGIN*/
+.cssEyeLid {
+  -webkit-animation: blinkingEye 7s infinite;
+  animation: blinkingEye 7s infinite;
+}
+
+@-webkit-keyframes blinkingEye {
+  0% {
+    height: 20px;
+    margin: 0;
+  }
+
+  58% {
+    height: 20px;
+    margin: 0;
+  }
+
+  60% {
+    height: 0px;
+    margin: 10px 0;
+  }
+
+  66% {
+    height: 20px;
+    margin: 0;
+  }
+
+  100% {
+    height: 20px;
+    margin: 0;
+  }
+}
+
+@keyframes blinkingEye {
+  0% {
+    height: 20px;
+    margin: 0;
+  }
+
+  58% {
+    height: 20px;
+    margin: 0;
+  }
+
+  60% {
+    height: 0px;
+    margin: 10px 0;
+  }
+
+  66% {
+    height: 20px;
+    margin: 0;
+  }
+
+  100% {
+    height: 20px;
+    margin: 0;
+  }
+}
+/*CSS blinking END*/
+/*-------------------------------------------------------------------head-----------------------head-------------------------------------------------------*/
+/*CSS head animation BEGIN*/
+#cssHead {
+  -webkit-animation: headRotations 10s infinite;
+  animation: headRotations 10s infinite;
+}
+
+@-webkit-keyframes headRotations {
+  0% {
+    -webkit-transform: rotate(-2deg) skew(-3deg, -2deg);
+  }
+
+  20% {
+    -webkit-transform: rotate(2deg) skew(-3deg, -2deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(-4deg) skew(-3deg, -2deg);
+  }
+
+  28% {
+    -webkit-transform: rotate(-2deg) skew(-3deg, -2deg);
+  }
+
+  40% {
+    -webkit-transform: rotate(-2deg) skew(-3deg, -2deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(2deg) skew(-3deg, -2deg);
+  }
+
+  60% {
+    -webkit-transform: rotate(-6deg) skew(-3deg, -2deg);
+  }
+
+  70% {
+    -webkit-transform: rotate(6deg) skew(-3deg, -2deg);
+  }
+
+  90% {
+    -webkit-transform: rotate(6deg) skew(-3deg, -2deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-2deg) skew(-3deg, -2deg);
+  }
+}
+
+@keyframes headRotations {
+  0% {
+    transform: rotate(-2deg) skew(-3deg, -2deg);
+  }
+
+  20% {
+    transform: rotate(2deg) skew(-3deg, -2deg);
+  }
+
+  25% {
+    transform: rotate(-4deg) skew(-3deg, -2deg);
+  }
+
+  28% {
+    transform: rotate(-2deg) skew(-3deg, -2deg);
+  }
+
+  40% {
+    transform: rotate(-2deg) skew(-3deg, -2deg);
+  }
+
+  50% {
+    transform: rotate(2deg) skew(-3deg, -2deg);
+  }
+
+  60% {
+    transform: rotate(-6deg) skew(-3deg, -2deg);
+  }
+
+  70% {
+    transform: rotate(6deg) skew(-3deg, -2deg);
+  }
+
+  90% {
+    transform: rotate(6deg) skew(-3deg, -2deg);
+  }
+
+  100% {
+    transform: rotate(-2deg) skew(-3deg, -2deg);
+  }
+}
+/*CSS head animation END*/
+/*--------------------------------------------------------------box-------------------------box---------------------------------------------------------*/
+/*CSS Box  Begin*/
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: tomato;
+}
+
+#box {
+  width: 250px;
+  height: 350px;
+  background-color: white;
+  border: 5px solid black;
+  padding: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+}
+
+  #box:hover {
+    cursor: wait;
+  }
+
+  #box #minion {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  /*CSS Box END*/
+  /*---------------------------------mouth-------------------------------------------mouth-----------------------------------*/
+
+/*CSS smiling animation BEGIN*/
+.cssMouth {
+  -webkit-animation: smilingMouth 8s infinite;
+  animation: smilingMouth 8s infinite;
+}
+
+@-webkit-keyframes smilingMouth {
+  0% {
+    height: 20px;
+    border-bottom: 3px solid #000;
+    margin: 0px auto 0;
+  }
+
+  20% {
+    height: 35px;
+    border-bottom: 6px solid #000;
+    margin: -10px auto 0;
+  }
+
+  80% {
+    height: 35px;
+    border-bottom: 6px solid #000;
+    margin: -10px auto 0;
+  }
+
+  100% {
+    height: 20px;
+    border-bottom: 3px solid #000;
+    margin: 0px auto 0;
+  }
+}
+
+@keyframes smilingMouth {
+  0% {
+    height: 20px;
+    border-bottom: 3px solid #000;
+    margin: 20px auto 0;
+  }
+
+  20% {
+    height: 35px;
+    border-bottom: 6px solid #000;
+    margin: -10px auto 0;
+  }
+
+  80% {
+    height: 35px;
+    border-bottom: 6px solid #000;
+    margin: -10px auto 0;
+  }
+
+  100% {
+    height: 20px;
+    border-bottom: 3px solid #000;
+    margin: 20px auto 0;
+  }
+}
+/*CSS smiling animation END*/
+/*--------------------------------------------------------------------New.css---------------------------------------------------------------------------------------New.css---------------------------------------------------*/
+#cssHead {
+  margin: 20px auto;
+  width: 180px;
+  background-color: #fff;
+  height: 180px;
+  -webkit-border-radius: 500px;
+  border-radius: 500px;
+  border: 3px solid #000;
+  -moz-transform: rotate(-2deg) skew(-3deg, -2deg);
+  -webkit-transform: rotate(-2deg) skew(-3deg, -2deg);
+  -o-transform: rotate(-2deg) skew(-3deg, -2deg);
+  -ms-transform: rotate(-2deg) skew(-3deg, -2deg);
+  transform: rotate(-2deg) skew(-3deg, -2deg);
+}
+
+.cssEye {
+  display: inline-block;
+}
+
+.cssPupil {
+  width: 12px;
+  background: #000;
+  height: 12px;
+  margin: 6px 0px 3px 8px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.cssEyeLid {
+  border: 1px solid #000;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 20px;
+  margin: 0;
+}
+
+.htmlEye {
+  border: 1px solid #000;
+  display: inline-block;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.wraphtmlEye {
+  background-color: #DDD;
+  margin: 6px;
+  padding: 4px;
+  width: 25px;
+  height: 25px;
+}
+
+.htmlPupil {
+  width: 12px;
+  background: #000;
+  height: 12px;
+  margin: 6px 4px 3px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.rightEye {
+  margin: 0;
+}
+
+.leftEye {
+  margin: 50px 4px 0px 66px;
+}
+
+.cssMouth {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 4px solid #000;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  height: 20px;
+  width: 45px;
+  margin: 0px auto 0;
+  tranform: rotate(0deg);
+}
+
+.cssSadMouth {
+  /*  width:50px; height:10px;  
+  border:solid 5px #000;
+  border-radius: 50%/100px 100px 0 0;
+    margin: 0px auto 0;
+    /* border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 4px solid #000;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    height: 20px;
+    width: 45px;
+    margin: 0px auto 0;
+    tranform: rotate(180deg);*/
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 4px solid #000;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  height: 20px;
+  width: 45px;
+  margin: 0px auto 0;
+  transform: rotate(180deg) translate(0px, -20px);
+}
+
+.over {
+  transform: rotate( -180deg );
+  transition: transform 150ms ease;
+}
+
+.out {
+  transform: rotate( -360deg );
+  transition: transform 150ms ease;
+}
+
+.bt {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+

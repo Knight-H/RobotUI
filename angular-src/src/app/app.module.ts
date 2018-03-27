@@ -15,6 +15,7 @@ import { ReservequeueComponent } from './components/reservequeue/reservequeue.co
 import { QueueresultComponent } from './components/queueresult/queueresult.component';
 import { QueuecallComponent } from './components/queuecall/queuecall.component';
 import { GuidetotableComponent } from './components/guidetotable/guidetotable.component';
+import { BobComponent } from './components/bob/bob.component';
 
 
 
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
   {path: 'result', component: QueueresultComponent},
   {path: 'call', component: QueuecallComponent},
   {path: 'guide', component: GuidetotableComponent},
-  {path: 'gail', component: TestgailComponent} 
+  { path: 'gail', component: TestgailComponent },
+  {path: 'bob', component: BobComponent } 
 ]
 
 
@@ -42,7 +44,8 @@ const appRoutes: Routes = [
     QueuecallComponent,
     GuidetotableComponent,
     TestgailComponent,
-    TestbhumComponent
+    TestbhumComponent,
+    BobComponent
   ],
   imports: [ 
     FormsModule, 

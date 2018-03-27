@@ -64,20 +64,23 @@
   position: absolute;
   top: 0;
 }
-.mobileSelect .content .btnBar .cancel {
-  left: 0;
-  color: #666;
-}
-.mobileSelect .content .btnBar .ensure {
-  right: 0;
-  color: #1e83d3;
-}
+  .mobileSelect .content .btnBar .cancel {
+    left: 0;
+    color: #666;
+    font-size: 30px;
+  }
+  .mobileSelect .content .btnBar .ensure {
+    right: 0;
+    color: #1e83d3;
+    font-size: 30px;
+  }
 .mobileSelect .content .btnBar .title {
   font-size: 15px;
   padding: 0 15%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+
 }
 .mobileSelect .content .panel:after {
   content: ".";
@@ -110,7 +113,7 @@
   transition: transform 0.18s ease-out, -webkit-transform 0.18s ease-out;
 }
 .mobileSelect .content .panel .wheel .selectContainer li {
-  font-size: 15px;
+  font-size: 30px;
   display: block;
   height: 40px;
   line-height: 40px;
