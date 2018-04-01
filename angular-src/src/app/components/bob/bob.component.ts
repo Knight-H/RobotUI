@@ -20,6 +20,7 @@ export class BobComponent implements OnInit {
       });
     });
 
+    //var object = $(".cssEye").attr("src", );
     var object = $(".cssEye");
         if(object.length > 0){
             var offset = object.offset(); 

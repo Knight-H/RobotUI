@@ -1,0 +1,62 @@
+.bg-img {
+    background-image: url('assets/background.jpg');
+    height: 480px;
+    width: 800px;
+    background-position:center; 
+	background-repeat:no-repeat; 
+	background-size:cover;
+	
+}
+
+.box {
+   
+    transform: translate(10%,50%);
+    
+  }
+  .box2 {
+   
+    transform: translate(50%,-50%);
+    
+  }
+
+.circle {
+	width: 100px;
+	height: 100px;
+	background: grey;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+    border-radius: 100px;
+    border:15px solid black; 
+    transform: translate(30%, 60%);
+    
+    
+
+}
+
+.circle2 {
+	width: 200px;
+	height: 200px;
+	background: white;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+    border-radius: 200px;
+    border:20px solid black;  
+    
+    /*transform: translate(30%, 60%);*/
+   
+  
+}
+
+.circle1 {
+	width: 200px;
+	height: 200px;
+	background: white;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+    border-radius: 200px;
+    border:20px solid black;  
+    
+    /*transform: translate(30%, 60%);*/
+   
+  
+}

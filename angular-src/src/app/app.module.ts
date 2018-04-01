@@ -16,6 +16,8 @@ import { QueueresultComponent } from './components/queueresult/queueresult.compo
 import { QueuecallComponent } from './components/queuecall/queuecall.component';
 import { GuidetotableComponent } from './components/guidetotable/guidetotable.component';
 import { BobComponent } from './components/bob/bob.component';
+import { Bob2Component } from './components/bob2/bob2.component';
+
 
 
 
@@ -28,7 +30,8 @@ const appRoutes: Routes = [
   {path: 'call', component: QueuecallComponent},
   {path: 'guide', component: GuidetotableComponent},
   { path: 'gail', component: TestgailComponent },
-  {path: 'bob', component: BobComponent } 
+  {path: 'bob', component: BobComponent },
+  {path: 'bob2', component: Bob2Component } 
 ]
 
 
@@ -45,7 +48,9 @@ const appRoutes: Routes = [
     GuidetotableComponent,
     TestgailComponent,
     TestbhumComponent,
-    BobComponent
+    BobComponent,
+    Bob2Component,
+   
   ],
   imports: [ 
     FormsModule, 
