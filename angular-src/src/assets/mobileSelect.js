@@ -124,6 +124,8 @@ var countDownMS = timeOutTimeMS;
         clearInterval(cock); //STOP FUCKING INTERVAL
 
         _this.hide();
+
+        window.location.pathname = '/'
       });
 
       _this.ensureBtn.addEventListener('click', function () {
@@ -144,6 +146,8 @@ var countDownMS = timeOutTimeMS;
         _this.curIndexArr = _this.getIndexArr();
         _this.curValue = _this.getCurValue();
         _this.callback(_this.curIndexArr, _this.curValue);
+
+        window.location.pathname = '/request'
 
 
       });
