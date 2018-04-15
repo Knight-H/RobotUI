@@ -18,7 +18,13 @@ declare var MobileSelect: any;
 
 export class ReservequeueComponent implements OnInit {
 
-  constructor(private router: Router, private data: SrdataService) { }
+  private tableData: any = null;
+
+  constructor(private router: Router, private data: SrdataService) {
+    this.data.currentTableData.subscribe((tableData) => {
+      this.tableData = tableData;
+    });
+  }
 
   ngOnInit() {
     var weekdayArr = ['1', '2', '3', '4', '5', '6', '>6'];
@@ -30,9 +36,7 @@ export class ReservequeueComponent implements OnInit {
       trigger: '#trigger1',
 
       wheels: [
-
         { data: weekdayArr }
-
       ],
 
       callback: function(indexArr, data) {
@@ -47,14 +51,13 @@ export class ReservequeueComponent implements OnInit {
           setInterval(() => {
             countDownMS = countDownMS - 500;
             if (countDownMS < 0) {
-              window.location.href = "";
+              this.router.navigate([""]);
             }
           }, 500);
         });
 
         this.data.requestTable(weekdayArr[indexArr], function(tData) {
-          alert(JSON.stringify(tData));
-          console.log(JSON.stringify(tData));
+          // console.log(JSON.stringify(tData));
           if (tData.tableInfo.length > 0) {
             this.router.navigate(["guide"]);
           } else {
@@ -62,7 +65,7 @@ export class ReservequeueComponent implements OnInit {
           }
         }.bind(this));
 
-      }.bind(this);
+      }.bind(this),
 
       //onPopUpEvent: function () {
       //  countDownMS = timeOutTimeMS;

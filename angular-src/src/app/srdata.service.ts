@@ -1,21 +1,27 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 import * as $ from 'jquery';
 
 @Injectable()
 export class SrdataService {
 
-  private tableData: any = null;
+  private tableDataSrc = new BehaviorSubject<any>(null);
+  public currentTableData = this.tableDataSrc.asObservable();
 
   public requestTable(amountOfPeople, callback) {
     $.getJSON(`http://localhost:100/sr/checkTable?amountOfPeople=${amountOfPeople}`, function(data) {
       callback(data);
-      this.tableData = data;
-    });
+      this.changeTableData(data);
+    }.bind(this));
   }
 
-  public getTableData(callback) {
-    callback(this.tableData);
+  public clearTable(){
+    this.changeTableData(null);
+  }
+
+  private changeTableData(tableData) {
+    this.tableDataSrc.next(tableData);
   }
 
 }
