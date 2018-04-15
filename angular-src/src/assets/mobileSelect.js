@@ -99,7 +99,7 @@ var countDownMS = timeOutTimeMS;
           window.location.href = "";
         }
       }, 50000);// adjust time from 500 --> 50000 so that the system not trigger too fast for implementaion purpose by Gail
-      
+
 
 
       if (_this.cascade) {
@@ -147,7 +147,7 @@ var countDownMS = timeOutTimeMS;
         _this.curValue = _this.getCurValue();
         _this.callback(_this.curIndexArr, _this.curValue);
 
-        window.location.pathname = '/request'
+        // window.location.pathname = '/request';
 
 
       });
@@ -225,7 +225,7 @@ var countDownMS = timeOutTimeMS;
         _this.isPC = false;
       }
     },
-    
+
     show: function () {
       this.mobileSelect.classList.add('mobileSelect-show');
       if (typeof this.onShow === 'function') {

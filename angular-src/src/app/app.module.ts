@@ -17,6 +17,7 @@ import { QueuecallComponent } from './components/queuecall/queuecall.component';
 import { GuidetotableComponent } from './components/guidetotable/guidetotable.component';
 import { BobComponent } from './components/bob/bob.component';
 import { Bob2Component } from './components/bob2/bob2.component';
+import { SrdataService } from './srdata.service';
 
 
 
@@ -58,7 +59,7 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [SrdataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
