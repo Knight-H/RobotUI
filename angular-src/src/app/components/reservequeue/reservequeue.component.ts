@@ -27,7 +27,7 @@ export class ReservequeueComponent implements OnInit {
   }
 
   ngOnInit() {
-    var weekdayArr = ['1', '2', '3', '4', '5', '6', '>6'];
+    var weekdayArr = ['testGuidePage', 'testQueuePage', '1', '2', '3', '4', '5', '6'];
     var timeOutTimeMS = 5 * 100000;// change from 1000--> 100000 to enlarge time because its too fast  by Gail
     var countDownMS = timeOutTimeMS;
 
@@ -55,6 +55,32 @@ export class ReservequeueComponent implements OnInit {
             }
           }, 500);
         });
+
+        // Test/Bypass
+        let testingCase = weekdayArr[indexArr];
+        /* UNKNOW ERROR USING SWITCH CASE*/
+        //     swtich(testingCase){
+        //       case "testGuidePage":
+        //   this.router.navigate(["guide"]);
+        //   break;
+        //   case 'testQueuePage':
+        //   this.router.navigate(["request"]);
+        //   break;
+        //   default:
+        //     console.log("no by pass");
+        //   break;
+        // }
+        if (testingCase === "testGuidePage") {
+          this.data.simTable();
+          this.router.navigate(["guide"]);
+          return;
+        }
+        if (testingCase === "testQueuePage") {
+          this.data.simQueue();
+          this.router.navigate(["request"]);
+          return;
+        }
+
 
         this.data.requestTable(weekdayArr[indexArr], function(tData) {
           // console.log(JSON.stringify(tData));
