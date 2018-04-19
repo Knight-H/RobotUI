@@ -18,6 +18,7 @@ import { GuidetotableComponent } from './components/guidetotable/guidetotable.co
 import { BobComponent } from './components/bob/bob.component';
 import { Bob2Component } from './components/bob2/bob2.component';
 import { SrdataService } from './srdata.service';
+import { MenuService } from './menu.service';
 
 
 
@@ -59,7 +60,7 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [SrdataService],
+  providers: [SrdataService, MenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
