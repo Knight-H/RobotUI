@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { RobotsService } from '../../robots.service';
 
 @Component({
   selector: 'app-homepage',
@@ -7,14 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-  
-  constructor() {
+
+  constructor(private rb: RobotsService) {
     var x;
   }
 
   ngOnInit() {
     //enableLoop;
-
+    this.rb.setRobotFree();
   }
 
 
@@ -24,4 +25,3 @@ export class HomepageComponent implements OnInit {
   this.loop = true;
   this.load();
 } */
-

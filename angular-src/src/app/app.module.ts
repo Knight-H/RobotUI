@@ -7,7 +7,7 @@ import { RouterModule, Routes} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { TestbhumComponent } from './components/testbhum/testbhum.component';
-import { TestgailComponent } from './components/testgail/testgail.component'; 
+import { TestgailComponent } from './components/testgail/testgail.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { RequesttableComponent } from './components/requesttable/requesttable.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -19,6 +19,7 @@ import { BobComponent } from './components/bob/bob.component';
 import { Bob2Component } from './components/bob2/bob2.component';
 import { SrdataService } from './srdata.service';
 import { MenuService } from './menu.service';
+import { RobotsService } from './robots.service';
 
 
 
@@ -33,7 +34,7 @@ const appRoutes: Routes = [
   {path: 'guide', component: GuidetotableComponent},
   { path: 'gail', component: TestgailComponent },
   {path: 'bob', component: BobComponent },
-  {path: 'bob2', component: Bob2Component } 
+  {path: 'bob2', component: Bob2Component }
 ]
 
 
@@ -52,16 +53,16 @@ const appRoutes: Routes = [
     TestbhumComponent,
     BobComponent,
     Bob2Component,
-   
+
   ],
-  imports: [ 
-    FormsModule, 
+  imports: [
+    FormsModule,
     MbscModule,
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [SrdataService, MenuService],
+  providers: [SrdataService, MenuService, RobotsService],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
 }

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 
 import { MenuService } from '../../menu.service';
+import { RobotsService } from '../../robots.service';
 
 @Component({
   selector: 'app-menu',
@@ -14,10 +15,9 @@ export class MenuComponent implements OnInit {
   private menuStuff = [];
   private counter:number = 0;
 
-  constructor(private data: MenuService) {
+  constructor(private data: MenuService, private rb: RobotsService) {
     this.data.currentMenuData.subscribe((menuData) => {
       this.menuStuff = menuData;
-      // console.log(this.menuStuff);
     });
   }
 
@@ -31,6 +31,7 @@ export class MenuComponent implements OnInit {
       console.log(d);
     });
     console.log("lol2");
+    this.rb.setRobotBusy();
   }
 
   nextItem() {

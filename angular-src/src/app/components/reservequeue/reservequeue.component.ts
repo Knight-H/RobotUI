@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { mobiscroll } from '@mobiscroll/angular-lite';
 
 import { SrdataService } from '../../srdata.service';
+import { RobotsService } from '../../robots.service';
 
 import * as $ from 'jquery';
 
@@ -20,13 +21,15 @@ export class ReservequeueComponent implements OnInit {
 
   private tableData: any = null;
 
-  constructor(private router: Router, private data: SrdataService) {
+  constructor(private router: Router, private data: SrdataService, private rb: RobotsService) {
     this.data.currentTableData.subscribe((tableData) => {
       this.tableData = tableData;
     });
   }
 
   ngOnInit() {
+
+    this.rb.setRobotBusy();
     var weekdayArr = ['testGuidePage', 'testQueuePage', '1', '2', '3', '4', '5', '6'];
     var timeOutTimeMS = 5 * 100000;// change from 1000--> 100000 to enlarge time because its too fast  by Gail
     var countDownMS = timeOutTimeMS;
