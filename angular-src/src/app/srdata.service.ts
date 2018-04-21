@@ -47,7 +47,7 @@ export class SrdataService {
     this.tableDataSrc.next(tableData);
   }
 
-  public invalidateSR(srUUID){
+  public invalidateSR(srUUID, callback){
     $.getJSON(`http://localhost:100/sr/srInvalid?groupID=${srUUID}`, function(data) {
       callback(data);
     }.bind(this));
