@@ -20,6 +20,7 @@ import { Bob2Component } from './components/bob2/bob2.component';
 import { SrdataService } from './srdata.service';
 import { MenuService } from './menu.service';
 import { RobotsService } from './robots.service';
+import { Menu1Component } from './components/menu1/menu1.component';
 
 
 
@@ -34,7 +35,8 @@ const appRoutes: Routes = [
   {path: 'guide', component: GuidetotableComponent},
   { path: 'gail', component: TestgailComponent },
   {path: 'bob', component: BobComponent },
-  {path: 'bob2', component: Bob2Component }
+  {path: 'bob2', component: Bob2Component },
+  {path: 'menu1', component: Menu1Component }
 ]
 
 
@@ -53,6 +55,7 @@ const appRoutes: Routes = [
     TestbhumComponent,
     BobComponent,
     Bob2Component,
+    Menu1Component,
 
   ],
   imports: [

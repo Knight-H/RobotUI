@@ -27,21 +27,23 @@ export class MenuService implements OnInit{
   }
 
   public updateMenu(callback){
-    this.requestMenu(function (data){
-      let menuList = data;
-      for (let item of menuList){
-        item.image=`http://localhost:100/menuItemImg/${item.itemNo}.png`;
-      }
-      this.menuSource.next(data);
-      callback(data);
-    }.bind(this));
+    this.simMenu();
+    // this.requestMenu(function (data){
+    //   let menuList = data;
+    //   for (let item of menuList){
+    //     item.image=`http://localhost:100/menuItemImg/${item.itemNo}.png`;
+    //   }
+    //   this.menuSource.next(data);
+    //   callback(data);
+    // }.bind(this));
   }
 
   public requestMenu(callback){
-    $.getJSON(`http://localhost:100/api/getMenuItem`, function(data) {
-      callback(data);
-      // console.log(data);
-    }.bind(this));
+    this.simMenu();
+    // $.getJSON(`http://localhost:100/api/getMenuItem`, function(data) {
+    //   callback(data);
+    //   // console.log(data);
+    // }.bind(this));
   }
 
   public simMenu() {
@@ -51,7 +53,8 @@ export class MenuService implements OnInit{
       itemDescription: 'Gud Fud',
       itemPrice: 45,
       isAvailable: 1,
-      image: 'http://i.huffpost.com/gen/1126498/images/o-LIFE-CHANGE-facebook.jpg'
+      image: 'http://i.huffpost.com/gen/1126498/images/o-LIFE-CHANGE-facebook.jpg',
+      category: 1
     },
     {
       itemNo: 2,
@@ -59,7 +62,8 @@ export class MenuService implements OnInit{
       itemDescription: 'Gud Egg',
       itemPrice: 20,
       isAvailable: 1,
-      image: 'http://i.huffpost.com/gen/1126498/images/o-LIFE-CHANGE-facebook.jpg'
+      image: 'http://i.huffpost.com/gen/1126498/images/o-LIFE-CHANGE-facebook.jpg',
+      category: 1
     },
     {
       itemNo: 3,
@@ -67,7 +71,8 @@ export class MenuService implements OnInit{
       itemDescription: 'Gordon Ramsy does not approve :c',
       itemPrice: 450,
       isAvailable: 0,
-      image: 'http://i.huffpost.com/gen/1126498/images/o-LIFE-CHANGE-facebook.jpg'
+      image: 'http://i.huffpost.com/gen/1126498/images/o-LIFE-CHANGE-facebook.jpg',
+      category: 2
     }];
     this.menuSource.next(data);
   }

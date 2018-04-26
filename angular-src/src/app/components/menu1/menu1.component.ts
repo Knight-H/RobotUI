@@ -6,39 +6,49 @@ import { MenuService } from '../../menu.service';
 import { RobotsService } from '../../robots.service';
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  selector: 'app-menu1',
+  templateUrl: './menu1.component.html',
+  styleUrls: ['./menu1.component.css']
 })
-export class MenuComponent implements OnInit {
+export class Menu1Component implements OnInit {
 
   private menuStuff = [];
-  private counter:number = 0;
+  private counter: number = 0;
+
 
   constructor(private data: MenuService, private rb: RobotsService) {
     this.data.currentMenuData.subscribe((menuData) => {
-      this.menuStuff = menuData;
+      if (menuData != null) {
+        for (var i = 0; i < menuData.length; i++) {
+          if (menuData && menuData[i].category === 1) {
+            this.menuStuff.push(menuData[i]);
+          }
+          console.log(JSON.stringify(this.menuStuff));
+        }
+      }
     });
+    this.data.simMenu();
   }
 
   ngOnInit() {
-    this.data.simMenu();
+    if (this.menuStuff.category === 1) {
+      console.log("Suck dick")
+    }
     $("#leftarrow").click(this.nextItem.bind(this));
     $("#rightarrow").click(this.nextItem.bind(this));
-      // this.data.updateMenu((d)=>{
-      //   this.counter = 0;
-      //   $("#leftarrow").click(this.nextItem.bind(this));
-      //   $("#rightarrow").click(this.nextItem.bind(this));
-      //   this.nextItem();
-      //   console.log("lol");
-      //   console.log(d);
-      // });
-      // console.log("lol2");
-      // this.rb.setRobotBusy();
+    // this.data.updateMenu((d)=>{
+    //   this.counter = 0;
+    //   $("#leftarrow").click(this.nextItem.bind(this));
+    //   $("#rightarrow").click(this.nextItem.bind(this));
+    //   this.nextItem();
+    //   console.log("lol");
+    //   console.log(d);
+    // });
+    // console.log("lol2");
+    // this.rb.setRobotBusy();
   }
 
   nextItem() {
-    console.log(this.menuStuff);
     // this.data.requestMenu(console.log);
     this.counter = (this.counter + 1) % this.menuStuff.length;
     let item = this.menuStuff[this.counter];
@@ -49,6 +59,7 @@ export class MenuComponent implements OnInit {
     $('#displayImage').attr("src", item.image); // ?????
     $("#itemDescription").text(item.itemDescription);
     $("#itemPrice").text(item.itemPrice + " Baht");
-    $("#isAvailable").text((item.isAvailable === 1) ? "Have" : "No Have" );
+    $("#isAvailable").text((item.isAvailable === 1) ? "Have" : "No Have");
   }
+
 }
