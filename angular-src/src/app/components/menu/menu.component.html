@@ -1,16 +1,29 @@
 <div class = "bg-img">
   <input id="displayImage" type="image" src="assets/salmon.jpg" class="salmon"/>
-  <input type="image" src="assets/leftbutton.jpg" style="height:352px; width:113px; transform: translate(0%, 40px)" align ="left" id = "leftarrow"/>
-  <input type="image" src="assets/rightbutton.jpg" style="height:352px; width:113px; transform: translate(0%, 40px)" align = "right" id = "rightarrow"/>
+  <input type="image" src="assets/leftbutton.jpg" style="height:176px; width:56.5px; transform: translate(0%, 40px)" align ="left" id = "leftarrow"/>
+  <input type="image" src="assets/rightbutton.jpg" style="height:176px; width:px; transform: translate(0%, 40px)" align = "right" id = "rightarrow"/>
 
   <div>
-    <p id = "itemNo" align = "right" style =" transform: translate(-20%, -150px)">1</p>
-    <p id = "itemName" align = "right" style =" transform: translate(-9%, -150px)">Salmu Sashimi</p>
-    <p id = "itemPrice" align = "right" style =" transform: translate(-12%, -150px)">Price:9999</p>
-    <p id = "isAvailable" align = "right" style =" transform: translate(-30%, -150px)">Have</p>
-
+    <div class = "category1" [routerLink]="['']"> 
+     <p  class = "text">Promo</p>
+    </div>
+    <div class = "category2"  [routerLink]="['']">
+        <p class = "text"> Dishes </p>
+    </div>
+    <div class = "category3" [routerLink]="['']">
+        <p class = "text2"> Beverage </p>
+    </div>
+    <div class = "category4" [routerLink]="['']">
+        <p class = "text2"> Dessert</p>
+    </div>
+    <div>
+    <p id = "itemNo" align = "left" style =" transform: translate(65%, -420px); position: relative;">1</p>
+    <p id = "itemName" align = "left" style =" transform: translate(65%, -420px); position: relative;">Salmu Sashimi</p>
+    <p id = "itemPrice" align = "left" style =" transform: translate(65%, -420px); position: relative;">Price:9999</p>
+    <p id = "isAvailable" align = "left" style =" transform: translate(65%, -420px); position: relative;">Have</p>
+     </div>    
   </div>
 
-  <input type="image"  src="assets/back.jpg" class = "back" align ="center" [routerLink]="['']"/>
+  <input type="image"  src="assets/undo.png" class = "back"  [routerLink]="['']"/>
 
 </div>

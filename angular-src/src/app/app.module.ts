@@ -21,6 +21,11 @@ import { SrdataService } from './srdata.service';
 import { MenuService } from './menu.service';
 import { RobotsService } from './robots.service';
 import { Menu1Component } from './components/menu1/menu1.component';
+import { Menu2Component } from './components/menu2/menu2.component';
+import { Menu3Component } from './components/menu3/menu3.component';
+import { Menu4Component } from './components/menu4/menu4.component';
+import { Menu15Component } from './components/menu1-5/menu1-5.component';
+
 
 
 
@@ -36,7 +41,11 @@ const appRoutes: Routes = [
   { path: 'gail', component: TestgailComponent },
   {path: 'bob', component: BobComponent },
   {path: 'bob2', component: Bob2Component },
-  {path: 'menu1', component: Menu1Component }
+  {path: 'menu1', component: Menu1Component },
+  {path: 'menu1_5', component: Menu15Component },
+  {path: 'menu2', component: Menu2Component },
+  {path: 'menu3', component: Menu3Component },
+  {path: 'menu4', component: Menu4Component },
 ]
 
 
@@ -56,6 +65,11 @@ const appRoutes: Routes = [
     BobComponent,
     Bob2Component,
     Menu1Component,
+    Menu2Component,
+    Menu3Component,
+    Menu4Component,
+    Menu15Component,
+ 
 
   ],
   imports: [

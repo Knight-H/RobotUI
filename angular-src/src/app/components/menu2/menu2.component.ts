@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-
 import * as $ from 'jquery';
 
 import { MenuService } from '../../menu.service';
 import { RobotsService } from '../../robots.service';
 
 @Component({
-  selector: 'app-menu1',
-  templateUrl: './menu1.component.html',
-  styleUrls: ['./menu1.component.css']
+  selector: 'app-menu2',
+  templateUrl: './menu2.component.html',
+  styleUrls: ['./menu2.component.css']
 })
-export class Menu1Component implements OnInit {
+export class Menu2Component implements OnInit {
 
   private menuStuff = [];
   private counter: number = 0;
@@ -20,7 +19,7 @@ export class Menu1Component implements OnInit {
     this.data.currentMenuData.subscribe((menuData) => {
       if (menuData != null) {
         for (var i = 0; i < menuData.length; i++) {
-          if (menuData && menuData[i].category === 1) {
+          if (menuData && menuData[i].category === 2) {
             this.menuStuff.push(menuData[i]);
           }
           //console.log(JSON.stringify(this.menuStuff));
