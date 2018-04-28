@@ -31,7 +31,7 @@ export class Menu3Component implements OnInit {
 
   ngOnInit() {
     
-    $("#leftarrow").click(this.nextItem.bind(this));
+    $("#leftarrow").click(this.prevItem2.bind(this));
     $("#rightarrow").click(this.nextItem.bind(this));
     // this.data.updateMenu((d)=>{
     //   this.counter = 0;
@@ -50,13 +50,27 @@ export class Menu3Component implements OnInit {
     this.counter = (this.counter + 1) % this.menuStuff.length;
     let item = this.menuStuff[this.counter];
     console.log("hi");
-    $("#itemNo").text(item.itemNo);
-    $("#itemName").text(item.itemName);
+    $("#itemNo").text("Num: "+item.itemNo);
+    $("#itemName").text("Name: "+item.itemName);
     // console.log(item.image);
     $('#displayImage').attr("src", item.image); // ?????
+    $("#itemDescription").text("Description: "+item.itemDescription);
+    $("#itemPrice").text("Price: "+item.itemPrice + " Baht");
+    $("#isAvailable").text("Status: "+((item.isAvailable === 1) ? "Have" : "No Have") );
+  }
+
+  prevItem2(){
+    this.counter = (this.counter + this.menuStuff.length - 1) % this.menuStuff.length;
+    this.displayItemToHTML(this.menuStuff[this.counter]);
+  }
+
+  displayItemToHTML(item){
+    $("#itemNo").text(item.itemNo);
+    $("#itemName").text(item.itemName);
+    $('#displayImage').attr("src", item.image);
     $("#itemDescription").text(item.itemDescription);
     $("#itemPrice").text(item.itemPrice + " Baht");
-    $("#isAvailable").text((item.isAvailable === 1) ? "Have" : "No Have");
+    $("#isAvailable").text((item.isAvailable === 1) ? "Have" : "No Have" );
   }
 
 }

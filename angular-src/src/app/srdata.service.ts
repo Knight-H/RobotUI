@@ -53,4 +53,16 @@ export class SrdataService {
     }.bind(this));
   }
 
+  public checkCallingQueue(callback){
+    $.getJSON(`http://localhost:100/sr/checkCallQueue`, function(data){
+      callback(data);
+    }.bind(this));
+  }
+
+  public requestQueue(amountOfPeople, callback){
+    $.getJSON(`http://localhost:100/sr/requestQueue?amountOfPeople=${amountOfPeople}`, function(data){
+      callback(data);
+    }.bind(this));
+  }
+
 }

@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { SrdataService } from '../../srdata.service';
+import { Router } from '@angular/router';
 import { MenuComponent } from './menu.component';
 
 describe('MenuComponent', () => {
