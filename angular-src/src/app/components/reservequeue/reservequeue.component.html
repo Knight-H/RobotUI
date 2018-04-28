@@ -1,10 +1,48 @@
-<div class = "bg-img" id="timeMeDaddy">
+<div id="timeMeDaddy">
+  <table style="width:100%; height:100%;">
+    <tbody style="">
+      <tr style="height:15%; font-size:50px;">
+        <td style="text-align:center;" colspan="3">
+          Select number of people:
+        </td>
+      </tr>
+      <tr style="height:35%;">
+        <td id="ppl_1" class="pplButton2">
+          <img src="assets/BUTTON_1.png" (click)="pplRequest(1)">
+        </td>
+        <td id="ppl_2" class="pplButton2">
+          <img src="assets/BUTTON_2.png" (click)="pplRequest(2)">
+        </td>
+        <td id="ppl_3" class="pplButton2">
+          <img src="assets/BUTTON_3.png" (click)="pplRequest(3)">
+        </td>
+      </tr>
+      <tr style="height:35%;">
+        <td id="ppl_4" class="pplButton2">
+          <img src="assets/BUTTON_4.png" (click)="pplRequest(4)">
+        </td>
+        <td id="ppl_5" class="pplButton2">
+          <img src="assets/BUTTON_5.png" (click)="pplRequest(5)">
+        </td>
+        <td id="ppl_6" class="pplButton2">
+          <img src="assets/BUTTON_6.png" (click)="pplRequest(6)">
+        </td>
+      </tr>
+      <tr (click)="backToMain();">
+        <td style="text-align:center; font-size:30px;" class="pplButton" colspan="3">
+          &larr; Back to Home
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
   <!--  <input type="image" src="assets/reservetable.jpg" class="reserve" [routerLink]="['/result']" />
   <input type="image" src="assets/back.png" align="right" class="back" [routerLink]="['']" />
     <p class="amount" align= "left">Amount</p>
     <p class="people" align = "right">People</p> -->
-    <!--<div class="div1" style="display: table;height: 200px;width: 200px;text-align: center;"> -->
-      <span id="trigger1" class="boxnum">Number</span>
-    <!--</div> -->
+  <!--<div class="div1" style="display: table;height: 200px;width: 200px;text-align: center;"> -->
+  <!-- <span id="trigger1" class="boxnum">Number</span> -->
+  <!--</div> -->
 </div>
-

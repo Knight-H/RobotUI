@@ -1,21 +1,22 @@
-.bg-img {
-    background-image: url('assets/background.jpg');
-    height: 480px;
-    width: 800px;
-    background-position:center; 
-	background-repeat:no-repeat; 
-	background-size:cover;
-	
-}
+/* .bg-img {
+  background-image: url('assets/background.jpg');
+  height: 480px;
+  width: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
 .boxnum {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
   font-weight: bold;
-  transform: translate(0,70%)
+  transform: translate(0, 70%);
+  font-size:75px;
 }
+
 .back {
   width: 400px;
   height: 50px;
-  transform: translate(50%, 400%)
+  transform: translate(50%, 200%)
 }
-

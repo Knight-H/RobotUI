@@ -6,6 +6,11 @@ import * as $ from 'jquery';
 @Injectable()
 export class SrdataService {
 
+  private numOfPpl: number = -1;
+
+  private queueDataSrc = new BehaviorSubject<any>(null);
+  public currentQueueData = this.queueDataSrc.asObservable();
+
   private tableDataSrc = new BehaviorSubject<any>(null);
   public currentTableData = this.tableDataSrc.asObservable();
 
@@ -47,22 +52,36 @@ export class SrdataService {
     this.tableDataSrc.next(tableData);
   }
 
-  public invalidateSR(srUUID, callback){
+  public invalidateSR(srUUID, callback) {
     $.getJSON(`http://localhost:100/sr/srInvalid?groupID=${srUUID}`, function(data) {
       callback(data);
     }.bind(this));
   }
 
-  public checkCallingQueue(callback){
-    $.getJSON(`http://localhost:100/sr/checkCallQueue`, function(data){
+  public requestQueue(amountOfPeople, callback) {
+    $.getJSON(`http://localhost:100/sr/requestQueue?amountOfPeople=${amountOfPeople}`, function(data) {
+      this.changeQueueData(data);
       callback(data);
     }.bind(this));
   }
 
-  public requestQueue(amountOfPeople, callback){
-    $.getJSON(`http://localhost:100/sr/requestQueue?amountOfPeople=${amountOfPeople}`, function(data){
+  private changeQueueData(queueData){
+    this.queueDataSrc.next(queueData);
+  }
+
+  public checkCallingQueue(callback) {
+    $.getJSON(`http://localhost:100/sr/checkCallingQueue`, function(data) {
+      this.changeQueueData(data);
       callback(data);
     }.bind(this));
+  }
+
+  public setPeopleAmount(ppl:number){
+    this.numOfPpl = ppl;
+  }
+
+  public getPeopleAmount(){
+    return this.numOfPpl;
   }
 
 }

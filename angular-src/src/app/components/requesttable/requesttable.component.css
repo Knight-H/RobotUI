@@ -1,30 +1,33 @@
-.bg-img {
-    background-image: url('assets/background.jpg');
-    height: 480px;
-    width: 800px;
-    background-position:center; 
-	background-repeat:no-repeat; 
-	background-size:cover;
-	
-}
+/* .bg-img {
+  background-image: url('assets/background.jpg');
+  height: 480px;
+  width: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
 .waiting {
   width: 290px;
   height: 290px;
   transform: translate(20%, 25%)
 }
+
 .request {
-  width:290px;
-  height:290px;
+  width: 290px;
+  height: 290px;
   transform: translate(-20%, 25%)
 }
 
-.back{
+.back {
   height: 60px;
   width: 60px;
-  transform: translate(200px,380px)
+  transform: translate(200px, 380px)
 }
+
 .num {
   display: table-cell;
   vertical-align: baseline;
-  transform: translate(-150px,200px)
+  font-size:50px;
+  transform: translate(-150px, 200px)
 }

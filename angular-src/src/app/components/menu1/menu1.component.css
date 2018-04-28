@@ -2,8 +2,8 @@
   background-image: url('assets/background.jpg');
   height: 480px;
   width: 800px;
-  background-position:center; 
-background-repeat:no-repeat; 
+  background-position:center;
+background-repeat:no-repeat;
 background-size:cover;
 
 }
@@ -16,7 +16,7 @@ transform: translate(300%, -350%) ;
 }
 .salmon{
 
-width: 350px; 
+width: 350px;
 height : 232px;
 transform: translate(10%,50%);
 border: 1px solid black;
@@ -30,7 +30,7 @@ background-color: azure;
   padding: 0px;
   margin: 0px;
   /*transform: translate(0%,-280%);*/
-  
+
 
 }
 
@@ -43,7 +43,7 @@ background-color: azure;
   padding: 0px;
   margin: 0px;
 /*   transform: translate(100%,-380%);*/
-  
+
 }
 
 .category3{
@@ -55,7 +55,7 @@ background-color: azure;
   padding: 0px;
   margin: 0px;
  /* transform: translate(200%,-480%);*/
-  
+
 }
 
 .category4{

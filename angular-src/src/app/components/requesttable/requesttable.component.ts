@@ -25,4 +25,11 @@ export class RequesttableComponent implements OnInit {
     $("#waitingQueueCount").text(this.tableData.waitingQ);
   }
 
+  requestQueuePlis(){
+    this.data.requestQueue(this.data.getPeopleAmount(), (d)=>{
+      console.log(d);
+      this.router.navigate(["/result"]);
+    });
+  }
+
 }

@@ -10,22 +10,41 @@ import * as $ from 'jquery';
 })
 export class QueuecallComponent implements OnInit {
 
-  private TIMEOUT_TIMEM_MS:number = 60 * 1000;
-  private countDownMS:number = this.TIMEOUT_TIMEM_MS;
+  private internalSRdata = null;
+  private timeoutTimer = null;
 
-  constructor(private data: SrdataService, private router: Router) { }
+  private TIMEOUT_TIMEM_MS: number = 60 * 1000;
+  private countDownMS: number = this.TIMEOUT_TIMEM_MS;
+
+  constructor(private data: SrdataService, private router: Router) {
+    this.data.currentQueueData.subscribe((queueData) => {
+      this.internalSRdata = queueData;
+    });
+  }
 
   ngOnInit() {
     this.countDownMS = this.TIMEOUT_TIMEM_MS;
-    $(document).ready(function(){ 
+
+    $("#queueDisplay").text("+"+this.internalSRdata.queueNo);
+
+    $(document).ready(function() {
       alert("Time replaced: " + this.TIMEOUT_TIMEM_MS);
-      setInterval(() => {
+
+      this.timeoutTimer = setInterval(() => {
+
+        if (this.router.url !== "/call") {
+          clearInterval(this.timeoutTimer);
+          return;
+        }
+
         this.countDownMS -= 1000;
         if (this.countDownMS < 0) {
           // this.data.invalidateSR("PLACEHOLDER UUID");
           this.router.navigate([""]);
         }
+
       }, 1000);
+
     }.bind(this));
   }
 

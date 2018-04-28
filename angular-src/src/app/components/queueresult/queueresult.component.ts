@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import * as $ from 'jquery';
+
+import { SrdataService } from '../../srdata.service';
 
 
 @Component({
@@ -10,17 +13,20 @@ import * as $ from 'jquery';
 })
 export class QueueresultComponent implements OnInit {
 
-  constructor() { }
+  private queueData: any = null;
+
+  constructor(private router: Router, private data: SrdataService) {
+    this.data.currentQueueData.subscribe((qData) => {
+      this.queueData = qData;
+    });
+  }
 
   ngOnInit() {
     // try to implement jquery to the <p> queue
 
-    $(document).ready(function () {
-      $("#queue").load(function () {
-        $("#queue").val("Dolly Duck");
-      });
-      // jQuery methods go here...
-
+    $(document).ready(() => {
+      // alert("Show: "+JSON.stringify(this.queueData));
+      $("#queueShow").text(this.queueData.queueNo);
     });
 
 }

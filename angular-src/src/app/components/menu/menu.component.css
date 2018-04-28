@@ -2,21 +2,21 @@
     background-image: url('assets/background.jpg');
     height: 480px;
     width: 800px;
-    background-position:center; 
-	background-repeat:no-repeat; 
+    background-position:center;
+	background-repeat:no-repeat;
 	background-size:cover;
-	
+
 }
 .back {
   align-items: baseline;
   height:100px;
   width: 100px;
   transform: translate(300%, -350%) ;
- 
+
 }
 .salmon{
 
-width: 350px; 
+width: 350px;
 height : 232px;
 transform: translate(10%,50%);
 border: 1px solid black;
@@ -30,7 +30,7 @@ border: 1px solid black;
     padding: 1px;
     margin: 0px;
     transform: translate(0%,-280%);
-    
+
 
 }
 
@@ -38,31 +38,31 @@ border: 1px solid black;
   width: 200px;
   height: 80px;
   background-color: azure;
-  
+
     border: 1px solid black;
     padding: 1px;
     margin: 0px;
     transform: translate(100%,-380%);
-    
+
 }
 
 .category3{
   width: 200px;
   height: 80px;
   background-color: azure;
-  
+
     border: 1px solid black;
     padding: 1px;
     margin: 0px;
     transform: translate(200%,-480%);
-    
+
 }
 
 .category4{
   width: 185px;
   height: 80px;
   background-color: azure;
-  
+
     border: 1px solid black;
     padding: 1px;
     margin: 0px;
