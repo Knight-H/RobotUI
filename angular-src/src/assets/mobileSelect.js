@@ -3,6 +3,9 @@
  * (c) 2017-present onlyhom
  * Released under the MIT License.
  */
+
+
+
 var counter = 0;
 function alerter() {
   //alert("Hi " + counter);
@@ -18,6 +21,7 @@ var countDownMS = timeOutTimeMS;
   }
   //构造器
   function MobileSelect(config) {
+    
     this.mobileSelect;
     this.wheelsData = config.wheels;
     this.jsonType = false;
