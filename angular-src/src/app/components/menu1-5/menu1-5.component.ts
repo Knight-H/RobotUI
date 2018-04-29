@@ -11,32 +11,40 @@ import { RobotsService } from '../../robots.service';
 export class Menu15Component implements OnInit {
 
   private menuStuff = [];
-  private counter:number = 0;
+  private counter: number = 0;
+
 
   constructor(private data: MenuService, private rb: RobotsService) {
     this.data.currentMenuData.subscribe((menuData) => {
-      this.menuStuff = menuData;
+      if (menuData != null) {
+        for (var i = 0; i < menuData.length; i++) {
+          if (menuData && menuData[i].category === 1) {
+            this.menuStuff.push(menuData[i]);
+          }
+          //console.log(JSON.stringify(this.menuStuff));
+        }
+      }
     });
+    this.data.simMenu();
   }
 
   ngOnInit() {
-    this.data.simMenu();
-    $("#leftarrow").click(this.nextItem.bind(this));
+    
+    $("#leftarrow").click(this.prevItem2.bind(this));
     $("#rightarrow").click(this.nextItem.bind(this));
-      // this.data.updateMenu((d)=>{
-      //   this.counter = 0;
-      //   $("#leftarrow").click(this.nextItem.bind(this));
-      //   $("#rightarrow").click(this.nextItem.bind(this));
-      //   this.nextItem();
-      //   console.log("lol");
-      //   console.log(d);
-      // });
-      // console.log("lol2");
-      // this.rb.setRobotBusy();
+    // this.data.updateMenu((d)=>{
+    //   this.counter = 0;
+    //   $("#leftarrow").click(this.nextItem.bind(this));
+    //   $("#rightarrow").click(this.nextItem.bind(this));
+    //   this.nextItem();
+    //   console.log("lol");
+    //   console.log(d);
+    // });
+    // console.log("lol2");
+    // this.rb.setRobotBusy();
   }
 
   nextItem() {
-    console.log(this.menuStuff);
     // this.data.requestMenu(console.log);
     this.counter = (this.counter + 1) % this.menuStuff.length;
     let item = this.menuStuff[this.counter];
@@ -47,7 +55,22 @@ export class Menu15Component implements OnInit {
     $('#displayImage').attr("src", item.image); // ?????
     $("#itemDescription").text("Description: "+item.itemDescription);
     $("#itemPrice").text("Price: "+item.itemPrice + " Baht");
-    $("#isAvailable").text("Status: "+(item.isAvailable === 1) ? "Have" : "No Have" );
+    $("#isAvailable").text("Status: " + ((item.isAvailable === 1) ? "Have" : "No Have") );
   }
+
+  prevItem2(){
+    this.counter = (this.counter + this.menuStuff.length - 1) % this.menuStuff.length;
+    this.displayItemToHTML(this.menuStuff[this.counter]);
+  }
+
+  displayItemToHTML(item){
+    $("#itemNo").text(item.itemNo);
+    $("#itemName").text(item.itemName);
+    $('#displayImage').attr("src", item.image);
+    $("#itemDescription").text(item.itemDescription);
+    $("#itemPrice").text(item.itemPrice + " Baht");
+    $("#isAvailable").text((item.isAvailable === 1) ? "Have" : "No Have" );
+  }
+
 
 }

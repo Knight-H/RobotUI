@@ -74,6 +74,5 @@ export class Menu1Component implements OnInit {
     $("#isAvailable").text((item.isAvailable === 1) ? "Have" : "No Have" );
   }
 
-  
 
 }

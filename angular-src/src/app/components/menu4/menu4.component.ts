@@ -30,23 +30,22 @@ export class Menu4Component implements OnInit {
 
   ngOnInit() {
     
-    // $("#leftarrow").click(this.nextItem.bind(this));
-    // $("#rightarrow").click(this.nextItem.bind(this));
-    this.data.updateMenu((d)=>{
-      this.counter = 0;
-      $("#leftarrow").click(this.prevItem2.bind(this));
-      $("#rightarrow").click(this.nextItem.bind(this));
-      this.nextItem();
-      console.log("lol");
-      console.log(d);
-    });
-    console.log("lol2");
-    this.rb.setRobotBusy();
+    $("#leftarrow").click(this.prevItem2.bind(this));
+    $("#rightarrow").click(this.nextItem.bind(this));
+    // this.data.updateMenu((d)=>{
+    //   this.counter = 0;
+    //   $("#leftarrow").click(this.nextItem.bind(this));
+    //   $("#rightarrow").click(this.nextItem.bind(this));
+    //   this.nextItem();
+    //   console.log("lol");
+    //   console.log(d);
+    // });
+    // console.log("lol2");
+    // this.rb.setRobotBusy();
   }
 
   nextItem() {
     // this.data.requestMenu(console.log);
-    if (!this.menuStuff){return;}
     this.counter = (this.counter + 1) % this.menuStuff.length;
     let item = this.menuStuff[this.counter];
     console.log("hi");
@@ -56,7 +55,7 @@ export class Menu4Component implements OnInit {
     $('#displayImage').attr("src", item.image); // ?????
     $("#itemDescription").text("Description: "+item.itemDescription);
     $("#itemPrice").text("Price: "+item.itemPrice + " Baht");
-    $("#isAvailable").text("Status: "+((item.isAvailable === 1) ? "Have" : "No Have") );
+    $("#isAvailable").text("Status: " + ((item.isAvailable === 1) ? "Have" : "No Have") );
   }
 
   prevItem2(){
@@ -72,4 +71,5 @@ export class Menu4Component implements OnInit {
     $("#itemPrice").text(item.itemPrice + " Baht");
     $("#isAvailable").text((item.isAvailable === 1) ? "Have" : "No Have" );
   }
+
 }

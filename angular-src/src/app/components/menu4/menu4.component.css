@@ -1,72 +1,83 @@
 .bg-img {
-    background-image: url('assets/background.jpg');
-    height: 480px;
-    width: 800px;
-    background-position:center;
-	background-repeat:no-repeat;
-	background-size:cover;
+  background-image: url('assets/background.jpg');
+  height: 480px;
+  width: 800px;
+  background-position:center; 
+background-repeat:no-repeat; 
+background-size:cover;
 
 }
 .back {
-  align-items: baseline;
-  height:100px;
-  width: 100px;
-  transform: translate(300%, -350%) ;
+height:50px;
+ width: 400px; 
+ text-align: center;
 
+}.left{
+height:176px; 
+width:56.5px; 
+float: left ;
+transform: translate(0,40%);
+
+}
+.right{
+height:176px; 
+width:56.5px; 
+float: right ;
+transform: translate(0,40%);
 }
 .salmon{
 
-width: 350px;
+width: 350px; 
 height : 232px;
 transform: translate(10%,50%);
 border: 1px solid black;
 }
 
 .category1{
-  width: 200x;
-  height: 80px;
-  background-color: azure;
-    border: 3px solid black;
-    padding: 0px;
-    margin: 0px;
-    /*transform: translate(0%,-280%);*/
-
+width: 200x;
+height: 80px;
+background-color: azure;
+  border: 3px solid black;
+  padding: 0px;
+  margin: 0px;
+  /*transform: translate(0%,-280%);*/
+  
 
 }
 
 .category2{
-  width: 200px;
-  height: 80px;
-  background-color: azure;
+width: 200px;
+height: 80px;
+background-color: azure;
 
-    border: 3px solid black;
-    padding: 0px;
-    margin: 0px;
- /*   transform: translate(100%,-380%);*/
-
+  border: 3px solid black;
+  padding: 0px;
+  margin: 0px;
+/*   transform: translate(100%,-380%);*/
+  
 }
 
 .category3{
-  width: 200px;
-  height: 80px;
-  background-color: azure;
+width: 200px;
+height: 80px;
+background-color: azure;
 
-    border: 3px solid black;
-    padding: 0px;
-    margin: 0px;
-   /* transform: translate(200%,-480%);*/
-
+  border: 3px solid black;
+  padding: 0px;
+  margin: 0px;
+ /* transform: translate(200%,-480%);*/
+  
 }
 
 .category4{
-  width: 200px;
-  height: 80px;
-  background-color: azure;
+width: 200px;
+height: 80px;
+background-color: azure;
 
-    border: 3px solid black;
-    padding: 0px;
-    margin: 0px;
-  /*  transform: translate(323%,-580%);*/
+  border: 3px solid black;
+  padding: 0px;
+  margin: 0px;
+/*  transform: translate(323%,-580%);*/
 }
 .text{
 font-size: 25px;
@@ -77,4 +88,10 @@ transform: translate(-30%,10%);
 font-size: 25px;
 text-align: center;
 transform: translate(0%,10%);
+}
+.menu{
+height:232px;
+ width:350px;
+ padding-left :50px; 
+ padding-top:20px;
 }

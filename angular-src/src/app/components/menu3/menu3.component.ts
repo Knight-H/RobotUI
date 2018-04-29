@@ -56,7 +56,7 @@ export class Menu3Component implements OnInit {
     $('#displayImage').attr("src", item.image); // ?????
     $("#itemDescription").text("Description: "+item.itemDescription);
     $("#itemPrice").text("Price: "+item.itemPrice + " Baht");
-    $("#isAvailable").text("Status: "+((item.isAvailable === 1) ? "Have" : "No Have") );
+    $("#isAvailable").text("Status: " + ((item.isAvailable === 1) ? "Have" : "No Have") );
   }
 
   prevItem2(){
@@ -72,5 +72,6 @@ export class Menu3Component implements OnInit {
     $("#itemPrice").text(item.itemPrice + " Baht");
     $("#isAvailable").text((item.isAvailable === 1) ? "Have" : "No Have" );
   }
+
 
 }
