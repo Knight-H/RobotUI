@@ -47,7 +47,7 @@ export class MenuService implements OnInit{
   }
 
   public simMenu() {
-    let data = [{
+    let data = [/*{
       itemNo: 1,
       itemName: 'Fried Rice',
       itemDescription: 'Gud Fud',
@@ -73,7 +73,103 @@ export class MenuService implements OnInit{
       isAvailable: 0,
       image: 'http://i.huffpost.com/gen/1126498/images/o-LIFE-CHANGE-facebook.jpg',
       category: 2
-    }];
+    }*/
+    {
+      itemNo: 1,
+      itemName: 'Salad',
+      itemDescription: 'Good salad',
+      itemPrice: 20,
+      isAvailable: 1,
+      image: 'assets/menu/food1.jpeg',
+      category: 1
+    },
+  
+    {
+      itemNo: 2,
+      itemName: 'Steak',
+      itemDescription: 'Juicy',
+      itemPrice: 20,
+      isAvailable: 1,
+      image: 'assets/menu/food2.jpg',
+      category: 1
+    },
+  
+    {
+      itemNo: 3,
+      itemName: 'Salmon',
+      itemDescription: 'Good salmon',
+      itemPrice: 20,
+      isAvailable: 1,
+      image: 'assets/menu/food3.jpg',
+      category: 1
+    },
+    {
+      itemNo: 4,
+      itemName: 'pizzz',
+      itemDescription: 'Good life',
+      itemPrice: 20,
+      isAvailable: 1,
+      image: 'assets/menu/food4.jpeg',
+      category: 1
+    },
+  /////////////////////////////////////////////Desert//////////////////////////////////////////////////////
+    {
+      itemNo: 1,
+      itemName: 'MONT BLANC',
+      itemDescription: 'Good life',
+      itemPrice: 20,
+      isAvailable: 1,
+      image: 'assets/menu/dess1.jpg',
+      category: 2
+    },
+    {
+      itemNo: 2,
+      itemName: 'MOOOOSE CAKE',
+      itemDescription: 'Good life',
+      itemPrice: 20,
+      isAvailable: 1,
+      image: 'assets/menu/dess2.jpg',
+      category: 2
+    },
+    {
+      itemNo: 3,
+      itemName: 'Icecream',
+      itemDescription: 'Good life',
+      itemPrice: 20,
+      isAvailable: 1,
+      image: 'assets/menu/dess3.jpg',
+      category: 2
+    },
+    ////////////////////////////////////////////////// DRINK//////////////////////////////////////////////////////////////////
+
+    {
+      itemNo: 1,
+      itemName: 'Caramel machiato',
+      itemDescription: 'Good life',
+      itemPrice: 20,
+      isAvailable: 1,
+      image: 'assets/menu/drink1.jpg',
+      category: 3
+    },
+    {
+      itemNo: 2,
+      itemName: 'Orange Juice',
+      itemDescription: 'Good life',
+      itemPrice: 20,
+      isAvailable: 1,
+      image: 'assets/menu/drink2.jpg',
+      category: 3
+    },
+    {
+      itemNo: 3,
+      itemName: 'PERRIER',
+      itemDescription: 'Good life',
+      itemPrice: 20,
+      isAvailable: 1,
+      image: 'assets/menu/drink3.jpg',
+      category: 3
+    }
+  ];
     this.menuSource.next(data);
   }
 
