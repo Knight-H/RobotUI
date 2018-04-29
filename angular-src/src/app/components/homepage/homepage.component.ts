@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import * as $ from 'jquery';
 
 import { RobotsService } from '../../robots.service';
 import { SrdataService } from '../../srdata.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
@@ -47,7 +47,7 @@ export class HomepageComponent implements OnInit {
             this.router.navigate(["call"]);
           }
         });
-      }, 250);
+      }, 5000);
 
 
     }.bind(this));

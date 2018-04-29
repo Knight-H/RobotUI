@@ -25,10 +25,17 @@ export class QueuecallComponent implements OnInit {
   ngOnInit() {
     this.countDownMS = this.TIMEOUT_TIMEM_MS;
 
-    $("#queueDisplay").text("+"+this.internalSRdata.queueNo);
+    $("#queueDisplay").text(this.internalSRdata.queueNo);
+
+
+
+
+
 
     $(document).ready(function() {
-      alert("Time replaced: " + this.TIMEOUT_TIMEM_MS);
+      // alert("Time replaced: " + this.TIMEOUT_TIMEM_MS);
+
+      $("#timeDisplayClock").text(this.countDownMS/1000);
 
       this.timeoutTimer = setInterval(() => {
 
@@ -37,9 +44,10 @@ export class QueuecallComponent implements OnInit {
           return;
         }
 
+        $("#timeDisplayClock").text(this.countDownMS/1000);
         this.countDownMS -= 1000;
         if (this.countDownMS < 0) {
-          // this.data.invalidateSR("PLACEHOLDER UUID");
+          this.data.invalidateSR(this.internalSRdata.groupID);
           this.router.navigate([""]);
         }
 

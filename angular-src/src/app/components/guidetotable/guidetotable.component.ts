@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import * as $ from 'jquery';
+import { SrdataService } from '../../srdata.service';
 
 @Component({
   selector: 'app-guidetotable',
@@ -7,9 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GuidetotableComponent implements OnInit {
 
-  constructor() { }
+  constructor(private srData: SrdataService, private router: Router) { }
 
   ngOnInit() {
+    //this.srData.invalidateSR(this.srData.tableInfo);
   }
 
 }
