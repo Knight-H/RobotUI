@@ -47,7 +47,6 @@ export class MenuService implements OnInit {
   }
 
   public simMenu() {
-<<<<<<< HEAD
     this.updateMenu((d)=>{alert(JSON.stringify(d));});
     if (1){
       return;
@@ -173,132 +172,8 @@ export class MenuService implements OnInit {
       }
     ];
     // this.menuSource.next(data);
-=======
-    let data = [/*{
-      itemNo: 1,
-      itemName: 'Fried Rice',
-      itemDescription: 'Gud Fud',
-      itemPrice: 45,
-      isAvailable: 1,
-      image: 'http://i.huffpost.com/gen/1126498/images/o-LIFE-CHANGE-facebook.jpg',
-      category: 1
-    },
-    {
-      itemNo: 2,
-      itemName: 'Fried Egg',
-      itemDescription: 'Gud Egg',
-      itemPrice: 20,
-      isAvailable: 1,
-      image: 'http://i.huffpost.com/gen/1126498/images/o-LIFE-CHANGE-facebook.jpg',
-      category: 1
-    },
-    {
-      itemNo: 3,
-      itemName: 'Lamb Sauce',
-      itemDescription: 'Gordon Ramsy does not approve :c',
-      itemPrice: 450,
-      isAvailable: 0,
-      image: 'http://i.huffpost.com/gen/1126498/images/o-LIFE-CHANGE-facebook.jpg',
-      category: 2
-    }*/
-    {
-      itemNo: 1,
-      itemName: 'Salad',
-      itemDescription: 'Good salad',
-      itemPrice: 20,
-      isAvailable: 1,
-      image: 'assets/menu/food1.jpeg',
-      category: 1
-    },
-  
-    {
-      itemNo: 2,
-      itemName: 'Steak',
-      itemDescription: 'Juicy',
-      itemPrice: 20,
-      isAvailable: 1,
-      image: 'assets/menu/food2.jpg',
-      category: 1
-    },
-  
-    {
-      itemNo: 3,
-      itemName: 'Salmon',
-      itemDescription: 'Good salmon',
-      itemPrice: 20,
-      isAvailable: 1,
-      image: 'assets/menu/food3.jpg',
-      category: 1
-    },
-    {
-      itemNo: 4,
-      itemName: 'pizzz',
-      itemDescription: 'Good life',
-      itemPrice: 20,
-      isAvailable: 1,
-      image: 'assets/menu/food4.jpeg',
-      category: 1
-    },
-  /////////////////////////////////////////////Desert//////////////////////////////////////////////////////
-    {
-      itemNo: 1,
-      itemName: 'MONT BLANC',
-      itemDescription: 'Good life',
-      itemPrice: 20,
-      isAvailable: 1,
-      image: 'assets/menu/dess1.jpg',
-      category: 2
-    },
-    {
-      itemNo: 2,
-      itemName: 'MOOOOSE CAKE',
-      itemDescription: 'Good life',
-      itemPrice: 20,
-      isAvailable: 1,
-      image: 'assets/menu/dess2.jpg',
-      category: 2
-    },
-    {
-      itemNo: 3,
-      itemName: 'Icecream',
-      itemDescription: 'Good life',
-      itemPrice: 20,
-      isAvailable: 1,
-      image: 'assets/menu/dess3.jpg',
-      category: 2
-    },
-    ////////////////////////////////////////////////// DRINK//////////////////////////////////////////////////////////////////
-
-    {
-      itemNo: 1,
-      itemName: 'Caramel machiato',
-      itemDescription: 'Good life',
-      itemPrice: 20,
-      isAvailable: 1,
-      image: 'assets/menu/drink1.jpg',
-      category: 3
-    },
-    {
-      itemNo: 2,
-      itemName: 'Orange Juice',
-      itemDescription: 'Good life',
-      itemPrice: 20,
-      isAvailable: 1,
-      image: 'assets/menu/drink2.jpg',
-      category: 3
-    },
-    {
-      itemNo: 3,
-      itemName: 'PERRIER',
-      itemDescription: 'Good life',
-      itemPrice: 20,
-      isAvailable: 1,
-      image: 'assets/menu/drink3.jpg',
-      category: 3
-    }
-  ];
+    
     this.menuSource.next(data);
->>>>>>> 98d11215ccbd20ecc667bf9cc57e0c9f7fc89390
   }
 
 }
