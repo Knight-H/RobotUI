@@ -76,7 +76,7 @@ export class MenuComponent implements OnInit {
   }
 
   prevItem() {
-    this.counter = (this.counter + this.menuWithCate[this.currCate].length - 1) % thismenuWithCate[this.currCate].length;
+    this.counter = (this.counter + this.menuWithCate[this.currCate].length - 1) % this.menuWithCate[this.currCate].length;
     this.setItem(this.counter);
   }
 
