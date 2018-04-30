@@ -13,98 +13,95 @@ import { RobotsService } from '../../robots.service';
 })
 export class MenuComponent implements OnInit {
 
+  private allMenuStuff = [];
+  private menuWithCate = {};
   private menuStuff = [];
-  private counter:number = 0;
-  
+  private counter: number = 0;
 
-  constructor(private router: Router, private data: MenuService, private rb: RobotsService) {
-    this.data.currentMenuData.subscribe((menuData) => {
-      this.menuStuff = menuData;
+  private toTimer = null;
+
+  public currCate = 1; // Default category
+
+  constructor(private router: Router, private mData: MenuService, private rb: RobotsService) {
+    this.mData.currentMenuData.subscribe((menuData) => {
+      if (menuData != null) {
+
+        this.allMenuStuff = menuData;
+
+
+        for (let item of this.allMenuStuff) {
+          let cateNo = parseInt(item.category);
+          let iArr = this.menuWithCate[cateNo] || new Array();
+          iArr.push(item);
+          this.menuWithCate[cateNo] = iArr;
+        }
+
+        this.setItem(0); // Set item
+      }
     });
+    this.mData.updateMenu((d)=>{}); // Get all the menu items
   }
-  
 
   ngOnInit() {
 
-    var timeOutTimeMS = 5 * 1000;// change from 1000--> 100000 to enlarge time because its too fast  by Gail
-    var countDownMS = timeOutTimeMS;
-    this.data.simMenu();
-    $("#leftarrow").click(this.prevItem2.bind(this));
-    $("#rightarrow").click(this.nextItem.bind(this));
-      // this.data.updateMenu((d)=>{
-      //   this.counter = 0;
-      //   $("#leftarrow").click(this.nextItem.bind(this));
-      //   $("#rightarrow").click(this.nextItem.bind(this));
-      //   this.nextItem();
-      //   console.log("lol");
-      //   console.log(d);
-      // });
-      // console.log("lol2");
-      // this.rb.setRobotBusy();
 
-      $(document).ready(function() {
-        $(document).click(function() {
-          countDownMS = timeOutTimeMS;
-          // comment out by gail for easy implement UI
-           //alert("Time replaced: " + timeOutTimeMS);
-        });
-    
-        // Timer count down
-        setInterval(() => {
-          countDownMS = countDownMS - 500;
-          if (countDownMS < 0) {
-            this.router.navigate([""]);
-          }
-        }, 500);
-      }.bind(this))
+    var timeOutTimeMS = 60 * 1000;// change from 1000--> 100000 to enlarge time because its too fast  by Gail
+    var countDownMS = timeOutTimeMS;
+
+
+    $(document).ready(function() {
+      $(document).click(function() {
+        countDownMS = timeOutTimeMS;
+        // comment out by gail for easy implement UI
+        //alert("Time replaced: " + timeOutTimeMS);
+      });
+
+      // Timer count down
+      this.toTimer = setInterval(() => {
+        if (this.router.url !== "/menu"){
+          clearInterval(this.toTimer);
+        }
+        countDownMS = countDownMS - 500;
+        if (countDownMS < 0) {
+          this.router.navigate([""]);
+        }
+      }, 500);
+    }.bind(this));
   }
 
   nextItem() {
-    console.log(this.menuStuff);
-    // this.data.requestMenu(console.log);
-    this.counter = (this.counter + 1) % this.menuStuff.length;
-    //this.counter = Math.max(this.counter - 1, 0);
-    let item = this.menuStuff[this.counter];
-    console.log("hi");
-    $("#itemNo").text(item.itemNo);
-    $("#itemName").text(item.itemName);
-    // console.log(item.image);
-    $('#displayImage').attr("src", item.image); // ?????
-    $("#itemDescription").text(item.itemDescription);
-    $("#itemPrice").text(item.itemPrice + " Baht");
-    $("#isAvailable").text((item.isAvailable === 1) ? "Have" : "No Have" );
+    this.counter = (this.counter + 1) % this.menuWithCate[this.currCate].length;
+    // alert("next item: "+this.counter);
+    this.setItem(this.counter);
   }
 
-  nextItem1() {
-    console.log(this.menuStuff);
-    // this.data.requestMenu(console.log);
-    //this.counter = (this.counter + 1) % this.menuStuff.length;
-    this.counter = Math.max(this.counter - 1, 0);
-    //this.counter = (this.counter + this.menuStuff.length - 1) % this.menuStuff.length;
-    let item = this.menuStuff[this.counter];
-    console.log("hi");
-    
-    
+  prevItem() {
+    this.counter = (this.counter + this.menuWithCate[this.currCate].length - 1) % thismenuWithCate[this.currCate].length;
+    this.setItem(this.counter);
   }
 
-  nextItem2(){
-    this.counter = Math.max(this.counter - 1, 0);
-    this.displayItemToHTML(this.menuStuff[this.counter]);
+  setItem(indexNo: number) {
+    // alert("indexNo: "+indexNo);
+    let item = this.menuWithCate[this.currCate][indexNo];
+    // alert(JSON.stringify(this.menuWithCate[this.currCate][1]));
+    // alert(JSON.stringify(item));
+    this.displayItemToHTML(item);
   }
 
-  prevItem2(){
-    this.counter = (this.counter + this.menuStuff.length - 1) % this.menuStuff.length;
-    this.displayItemToHTML(this.menuStuff[this.counter]);
+  setCategory(categoryNum: number) {
+    this.currCate = categoryNum;
+    this.counter = 0;
+    this.setItem(0);
   }
 
-  displayItemToHTML(item){
-    $("#itemNo").text(item.itemNo);
-    $("#itemName").text(item.itemName);
+  displayItemToHTML(item) {
+    $("#itemNo").text("ItemNo: " + item.itemNo);
+    $("#itemName").text("Name: " + item.itemName);
     $('#displayImage').attr("src", item.image);
-    $("#itemDescription").text(item.itemDescription);
-    $("#itemPrice").text(item.itemPrice + " Baht");
-    $("#isAvailable").text((item.isAvailable === 1) ? "Have" : "No Have" );
+    $("#itemDescription").text("Description: " + item.itemDescription);
+    $("#itemPrice").text("Price: " + item.itemPrice + " Baht");
+    $("#isAvailable").text("Availablility: " + (item.isAvailable === 1) ? "Have" : "No Have");
   }
 
-  
+
 }

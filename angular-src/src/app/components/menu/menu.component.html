@@ -1,29 +1,60 @@
-<div class = "bg-img">
-  <input id="displayImage" type="image" src="assets/salmon.jpg" class="salmon"/>
-  <input type="image" src="assets/leftbutton.jpg" style="height:176px; width:56.5px; transform: translate(0%, 40px)" align ="left" id = "leftarrow"/>
-  <input type="image" src="assets/rightbutton.jpg" style="height:176px; width:px; transform: translate(0%, 40px)" align = "right" id = "rightarrow"/>
+<table style="height: 100%; width:100%; table-layout: fixed;">
 
-  <div>
-    <div class = "category1" [routerLink]="['']"> 
-     <p  class = "text">Promo</p>
-    </div>
-    <div class = "category2"  [routerLink]="['']">
-        <p class = "text"> Dishes </p>
-    </div>
-    <div class = "category3" [routerLink]="['']">
-        <p class = "text2"> Beverage </p>
-    </div>
-    <div class = "category4" [routerLink]="['']">
-        <p class = "text2"> Dessert</p>
-    </div>
-    <div>
-    <p id = "itemNo" align = "left" style =" transform: translate(65%, -420px); position: relative;">1</p>
-    <p id = "itemName" align = "left" style =" transform: translate(65%, -420px); position: relative;">Salmu Sashimi</p>
-    <p id = "itemPrice" align = "left" style =" transform: translate(65%, -420px); position: relative;">Price:9999</p>
-    <p id = "isAvailable" align = "left" style =" transform: translate(65%, -420px); position: relative;">Have</p>
-     </div>    
-  </div>
+  <!-- category bar -->
+  <tr style="height: 15%;">
+    <th class="categoryTab textTab" (click)="setCategory(1);">
+      Promo
+      <!-- <p class="text2"></p> -->
+    </th>
+    <th class="categoryTab textTab" (click)="setCategory(2);">
+      Dishes
+      <!-- <p class="text2">  </p> -->
+    </th>
+    <th class="categoryTab textTab" (click)="setCategory(3);">
+      Beverage
+      <!-- <p class="text2">  </p> -->
+    </th>
+    <th class="categoryTab textTab" (click)="setCategory(4);">
+      Dessert
+      <!-- <p class="text2"> </p> -->
+    </th>
+  </tr>
 
-  <input type="image"  src="assets/undo.png" class = "back"  [routerLink]="['']"/>
+  <!-- Menu Stuff -->
+  <tr style="height: 70%;">
+    <td colspan="4">
 
-</div>
+      <img src="assets/leftbutton.jpg" class="left" id="leftarrow" (click)="prevItem();" />
+
+      <div style="width:85%; margin: 0 0 0 0; float: left; text-align: center">
+        <table>
+          <tr>
+            <td>
+              <img src="assets/menu/food1.jpeg" class="menu" id="displayImage" />
+            </td>
+            <td class="text">
+              <p id="itemNo" align="left">Num: 1</p>
+              <p id="itemName" align="left">Name: Salad</p>
+              <p id="itemDescription" align="left">Description: Good salad</p>
+              <p id="itemPrice" align="left">Price: 20</p>
+              <p id="isAvailable" align="left">Status: Have</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+
+      <img src="assets/rightbutton.jpg" class="right" id="rightarrow" (click)="nextItem();" />
+    </td>
+  </tr>
+
+
+  <!-- Back button -->
+  <tr style="height:15%; margin: 0 0 0 0; ">
+    <td colspan="4">
+      <div style="margin: auto; text-align:center">
+        <input type="image" src="assets/back.jpg" align="center" class="back" [routerLink]="['']" />
+      </div>
+    </td>
+  </tr>
+</table>
