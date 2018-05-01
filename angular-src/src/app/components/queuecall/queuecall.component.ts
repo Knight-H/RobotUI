@@ -13,7 +13,7 @@ export class QueuecallComponent implements OnInit {
   private internalSRdata = null;
   private timeoutTimer = null;
 
-  private TIMEOUT_TIMEM_MS: number = 60 * 1000;
+  private TIMEOUT_TIMEM_MS: number = 6 * 1000;
   private countDownMS: number = this.TIMEOUT_TIMEM_MS;
 
   constructor(private data: SrdataService, private router: Router) {
@@ -33,7 +33,7 @@ export class QueuecallComponent implements OnInit {
 
 
     $(document).ready(function() {
-      // alert("Time replaced: " + this.TIMEOUT_TIMEM_MS);
+      //alert("Time replaced: " + this.TIMEOUT_TIMEM_MS);
 
       $("#timeDisplayClock").text(this.countDownMS/1000);
 
@@ -47,7 +47,7 @@ export class QueuecallComponent implements OnInit {
         $("#timeDisplayClock").text(this.countDownMS/1000);
         this.countDownMS -= 1000;
         if (this.countDownMS < 0) {
-          this.data.invalidateSR(this.internalSRdata.groupID);
+          this.data.invalidateSR(this.internalSRdata.groupID, (d)=>{});
           this.router.navigate([""]);
         }
 

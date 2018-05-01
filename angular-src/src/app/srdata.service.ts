@@ -18,6 +18,7 @@ export class SrdataService {
     $.getJSON(`http://localhost:100/sr/checkTable?amountOfPeople=${amountOfPeople}`, function(data) {
       callback(data);
       this.changeTableData(data);
+	  this.setPeopleAmount(amountOfPeople);
     }.bind(this));
   }
 

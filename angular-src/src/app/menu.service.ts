@@ -172,7 +172,7 @@ export class MenuService implements OnInit {
       }
     ];
     // this.menuSource.next(data);
-    
+
     this.menuSource.next(data);
   }
 

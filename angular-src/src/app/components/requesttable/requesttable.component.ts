@@ -27,6 +27,7 @@ export class RequesttableComponent implements OnInit {
 
   requestQueuePlis(){
     this.data.requestQueue(this.data.getPeopleAmount(), (d)=>{
+		//alert("Name plis: " + JSON.stringify(this.tableData));
       console.log(d);
       this.router.navigate(["/result"]);
     });

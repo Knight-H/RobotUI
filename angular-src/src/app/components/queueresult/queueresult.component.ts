@@ -25,7 +25,7 @@ export class QueueresultComponent implements OnInit {
     // try to implement jquery to the <p> queue
 
     $(document).ready(() => {
-      // alert("Show: "+JSON.stringify(this.queueData));
+		//alert("Show: "+JSON.stringify(this.queueData));
       $("#queueShow").text(this.queueData.queueNo);
     });
 

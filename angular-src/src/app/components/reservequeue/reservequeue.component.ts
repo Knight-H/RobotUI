@@ -32,9 +32,10 @@ export class ReservequeueComponent implements OnInit {
   }
 
   pplRequest(amtOfPpl: number) {
-    this.data.setPeopleAmount(amtOfPpl);
+    //this.data.setPeopleAmount(amtOfPpl);
     this.countDownMS = this.TIMEOUT_TIMEM_MS;
     this.data.requestTable(amtOfPpl, function(tData) {
+		//alert("ReserveQueue"+JSON.stringify(tData));
       if (tData.tableInfo.length > 0) {
         this.router.navigate(["guide"]);
       } else {

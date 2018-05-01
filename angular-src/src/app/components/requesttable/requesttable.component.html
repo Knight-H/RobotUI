@@ -1,6 +1,6 @@
 <div class="bg-img">
   <input type="image" src="assets/waiting.jpg" align="left" class="waiting" />
-  <input type="image" src="assets/reserve.jpg" align="right" class="request" [routerLink]="['/result']" />
-  <span id="waitingQueueCount" class="num">Number to be put here</span>
+  <input type="image" src="assets/reserve.jpg" align="right" class="request" (click)="requestQueuePlis()" />
+  <span id="waitingQueueCount" class="num">0</span>
   <input type="image" src="assets/back.png" align="right" class="back" [routerLink]="['']" />
 </div>
